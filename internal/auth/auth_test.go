@@ -24,10 +24,14 @@ func TestGetAPIKey(t *testing.T) {
 
 	for _, tc := range tests {
 
-		apikey, _ := auth.GetAPIKey(tc.input)
+		apikey, err := auth.GetAPIKey(tc.input)
 
 		if apikey != tc.apikey {
 			t.Fatalf("expected: %v, got: %v", tc.apikey, apikey)
+		}
+
+		if err != tc.err {
+			t.Fatalf("expected: %v, got: %v", tc.err, err)
 		}
 
 	}
