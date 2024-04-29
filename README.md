@@ -1,3 +1,4 @@
+![code coverage badge](https://github.com/thiagocamargodacosta/learn-cicd-starter/actions/workflows/ci.yml/badge.svg)
 # learn-cicd-starter (Notely)
 
 This repo contains the starter code for the "Notely" application for the "Learn CICD" course on [Boot.dev](https://boot.dev).
@@ -10,6 +11,12 @@ Create a `.env` file in the root of the project with the following contents:
 
 ```bash
 PORT="8080"
+```
+
+One way would be running the following command:
+
+```bash
+echo 'PORT="8080"' > .env
 ```
 
 Run the server:
